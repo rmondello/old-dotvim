@@ -14,9 +14,4 @@ Thanks to Mike, this project uses Pathogen, [a nice way of maintaining vim plugi
 	mv rmondello-vim-config .vim
 	ln .vim/vimrc .vimrc
 
-## Hard links to SunburstVIM.
-
-	cd ~/.vim/
-	ln SunburstVIM/col
-
 That should be it!
