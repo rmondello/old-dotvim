@@ -1,9 +1,10 @@
-" Cherrygrove
+" Ricky's vimrc.
 
+" Pathogen, a sane package manager for Vim plugins.
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-set mouse=a				" Badass. Enable mouse features.
+set mouse=a	" Enable mouse features. Scrolling. Text selection.
 
 " From Phil and Marshall:
 
@@ -13,25 +14,25 @@ nmap <leader>w :w!<cr>
 
 set so=7
 set wildmode=longest:full
-set wildmenu "autocomplete and fun stuff!
-set ruler "always show current pos
-set cmdheight=2 "shortens cmd height
+set wildmenu    " autocomplete and fun stuff!
+set ruler       " always show current pos
+set cmdheight=2 " shortens cmd height
 
-set backspace=eol,start,indent "backspace configuration
+set backspace=eol,start,indent " backspace configuration
 set whichwrap+=<,>,h,l
 
-set ignorecase "Ignore case when searching
+set ignorecase " Ignore case when searching
 set smartcase
 
-set hlsearch "Highlight searches
+set hlsearch " Highlight searches
 
-set incsearch "more like webbrowser search
-set nolazyredraw "Don't redraw during macros
+set incsearch " more like webbrowser search
+set nolazyredraw " Don't redraw during macros
 
-set magic "For regular expressions
+set magic " For regular expressions
 
-set showmatch "Matching braces highlighting
-set mat=2 "Blink for above
+set showmatch " Matching braces highlighting
+set mat=2 " Blink for above
 
 "No sound on errors
 set noerrorbells
@@ -103,7 +104,7 @@ set wrap
 " set default indentation (per-language settings below)
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 
-" mwhite:
+" From Mike White:
 
 " only complete up to longest common string, always show a menu
 set completeopt=longest,menuone,preview
