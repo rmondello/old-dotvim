@@ -1,0 +1,3 @@
+[submodule "SunburstVIM"]
+	path = SunburstVIM
+	url = https://github.com/tangphillip/SunburstVIM.git
