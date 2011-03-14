@@ -10,6 +10,7 @@ Thanks to Mike, this project uses Pathogen, [a nice way of maintaining vim plugi
 
 	cd ~
 	mv .vim .vim-backup
+	mv .vimrc .vimrc-backup
 	git clone https://github.com/rmondello/rmondello-vim-config.git
 	mv rmondello-vim-config .vim
 	ln .vim/vimrc .vimrc
