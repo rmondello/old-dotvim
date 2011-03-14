@@ -1,5 +1,12 @@
 " Ricky's vimrc.
 
+" Silence the vim startup screen.
+set shortmess=I
+
+" escape with jj!
+imap jj <Esc>
+set ttymouse=xterm2
+
 " Pathogen, a sane package manager for Vim plugins.
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
@@ -44,7 +51,8 @@ set tm=500
 "COLOR SETTINGS
 
 syntax enable "Enable syntax hl
-set background=dark
+"set background=dark
+set t_Co=256
 if has("gui_running") || $TERM=="xterm-256color"
     set t_Co=256
     set guioptions-=T
@@ -125,13 +133,14 @@ inoremap <Tab> <C-R>=HandleTab()<CR>
 
 if has("autocmd")
 	" language-specific indentation settings
-	autocmd FileType c,cpp				setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
-	autocmd FileType scm,sml			setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
-	autocmd FileType sh,csh,tcsh,zsh	setlocal ts=4 sts=4 sw=4 et
+	autocmd FileType c,cpp				      setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
+	autocmd FileType sh,csh,tcsh,zsh	  setlocal ts=4 sts=4 sw=4 et
 	autocmd FileType php,javascript,css	setlocal ts=4 sts=4 sw=4 et
+	autocmd FileType text,txt,mkd		    setlocal ts=4 sts=4 sw=4 et tw=80 wrap
+	
+  autocmd FileType html,xhtml,xml		  setlocal ts=2 sts=2 sw=2 et
 	autocmd FileType ruby,eruby,yaml	setlocal ts=2 sts=2 sw=2 et
-	autocmd FileType text,txt,mkd		setlocal ts=4 sts=4 sw=4 et tw=80 wrap
-	autocmd FileType html,xhtml,xml		setlocal ts=2 sts=2 sw=2 et
+	autocmd FileType scm,sml			    setlocal ts=2 sts=2 sw=2 et tw=80 nowrap
 
 	" language-specific general settings
 	autocmd FileType php noremap <C-M> :w!<CR>:!php %<CR>		" run file
@@ -139,5 +148,5 @@ if has("autocmd")
 
 endif
 
-nnoremap <Space> <PageDown>
-nnoremap <S-Space> <PageUp>		" only works in GVim
+" nnoremap <Space> <PageDown>
+" nnoremap <S-Space> <PageUp>		" only works in GVim
