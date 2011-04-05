@@ -1,5 +1,8 @@
 " Ricky's vimrc.
 
+" Trying this out:
+:nmap <w :wa\|make<cr>
+
 " Silence the vim startup screen.
 set shortmess=I
 
@@ -140,7 +143,7 @@ if has("autocmd")
 	
   autocmd FileType html,xhtml,xml		  setlocal ts=2 sts=2 sw=2 et
 	autocmd FileType ruby,eruby,yaml	setlocal ts=2 sts=2 sw=2 et
-	autocmd FileType scm,sml			    setlocal ts=2 sts=2 sw=2 et tw=80 nowrap
+	autocmd FileType scm,sml,lisp			    setlocal ts=2 sts=2 sw=2 et tw=80 nowrap
 
 	" language-specific general settings
 	autocmd FileType php noremap <C-M> :w!<CR>:!php %<CR>		" run file
@@ -150,3 +153,6 @@ endif
 
 " nnoremap <Space> <PageDown>
 " nnoremap <S-Space> <PageUp>		" only works in GVim
+
+au BufNewFile,BufRead *.uml set filetype=scheme
+
