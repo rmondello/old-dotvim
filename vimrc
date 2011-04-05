@@ -1,10 +1,14 @@
 " Ricky's vimrc.
 
+" Trying this out:
+:nmap <w :wa\|make<cr>
+
 " Silence the vim startup screen.
 set shortmess=I
 
 " escape with jj!
 imap jj <Esc>
+imap ;; <w|make>
 set ttymouse=xterm2
 
 " Pathogen, a sane package manager for Vim plugins.
