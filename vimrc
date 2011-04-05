@@ -1,7 +1,7 @@
 " Ricky's vimrc.
 
 " Trying this out:
-:nmap <w :wa\|make<cr>
+:nmap ;; :wa\|make<cr>
 
 " Silence the vim startup screen.
 set shortmess=I
