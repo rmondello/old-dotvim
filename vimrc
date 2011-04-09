@@ -2,19 +2,21 @@
 
 " Trying this out:
 :nmap ;; :wa\|make<cr>
+set nohlsearch " Don't highlight words on search.
+nnoremap <silent> _ :nohl<CR>
 
 " Silence the vim startup screen.
 set shortmess=I
 
 " escape with jj!
 imap jj <Esc>
-set ttymouse=xterm2
 
 " Pathogen, a sane package manager for Vim plugins.
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
 set mouse=a	" Enable mouse features. Scrolling. Text selection.
+"set ttymouse=xterm2
 
 " From Phil and Marshall:
 
