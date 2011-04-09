@@ -5,7 +5,7 @@
 set hlsearch " Highlight words on search...
 " But kill highlight on underscore.
 nnoremap <silent> _ :nohl<CR> 
-set clipboard=unnamedplus
+set clipboard=unnamedplus " * register is Mac OS clipboard!
 
 " Silence the vim startup screen.
 set shortmess=I
