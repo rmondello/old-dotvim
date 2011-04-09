@@ -2,11 +2,14 @@
 
 " Trying this out:
 :nmap ;; :wa\|make<cr>
-set nohlsearch " Don't highlight words on search.
-nnoremap <silent> _ :nohl<CR>
+set hlsearch " Highlight words on search...
+" But kill highlight on underscore.
+nnoremap <silent> _ :nohl<CR> 
+set clipboard=unnamedplus
 
 " Silence the vim startup screen.
 set shortmess=I
+nmap <leader>w :w!<cr>
 
 " escape with jj!
 imap jj <Esc>
@@ -35,8 +38,6 @@ set whichwrap+=<,>,h,l
 
 set ignorecase " Ignore case when searching
 set smartcase
-
-set hlsearch " Highlight searches
 
 set incsearch " more like webbrowser search
 set nolazyredraw " Don't redraw during macros
