@@ -1,11 +1,19 @@
 " Ricky's vimrc.
 
-" Trying this out:
-:nmap ;; :wa\|make<cr>
+""" Experimental Section
+
+augroup myvimrchooks
+  au!
+  autocmd bufwritepost .vimrc source ~/.vimrc
+augroup END
+
+nmap ;; :wa\|make<cr>
 set hlsearch " Highlight words on search...
 " But kill highlight on underscore.
 nnoremap <silent> _ :nohl<CR> 
 set clipboard=unnamedplus " * register is Mac OS clipboard!
+
+""" End Experimental Section
 
 " Silence the vim startup screen.
 set shortmess=I
@@ -13,6 +21,10 @@ nmap <leader>w :w!<cr>
 
 " escape with jj!
 imap jj <Esc>
+
+let g:SuperTabCompletionContexts = ['s:ContextText' , 's:ContextDiscover']
+let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
 
 " Pathogen, a sane package manager for Vim plugins.
 call pathogen#helptags()
@@ -124,18 +136,18 @@ set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 set completeopt=longest,menuone,preview
 
 " Try Snipmate, then omnicompletion, before returning regular tab
-function! HandleTab()
-	let snippet_response = exists("TriggerSnippet") ? TriggerSnippet() : "\<tab>"
-	if snippet_response != "\<tab>"
-		return snippet_response
-	elseif exists("omnifunc") && col('.') > 1 && strpart( getline('.'), col('.')-2, 3) =~ '^\w'
-		return "\<C-X>\<C-O>"
-	else
-		return "\<Tab>"
-	endif
-endfunction
+" function! HandleTab()
+" 	let snippet_response = exists("TriggerSnippet") ? TriggerSnippet() : "\<tab>"
+" 	if snippet_response != "\<tab>"
+" 		return snippet_response
+" 	elseif exists("omnifunc") && col('.') > 1 && strpart( getline('.'), col('.')-2, 3) =~ '^\w'
+" 		return "\<C-X>\<C-O>"
+" 	else
+" 		return "\<Tab>"
+" 	endif
+" endfunction
 
-inoremap <Tab> <C-R>=HandleTab()<CR>
+" inoremap <Tab> <C-R>=HandleTab()<CR>
 
 if has("autocmd")
 	" language-specific indentation settings
@@ -153,9 +165,6 @@ if has("autocmd")
 	autocmd FileType php noremap <C-L> :w!<CR>:!php -l %<CR>	" check syntax
 
 endif
-
-" nnoremap <Space> <PageDown>
-" nnoremap <S-Space> <PageUp>		" only works in GVim
 
 au BufNewFile,BufRead *.uml set filetype=scheme
 
