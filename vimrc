@@ -10,8 +10,8 @@ augroup END
 nmap ;; :wa\|make<cr>
 set hlsearch " Highlight words on search...
 " But kill highlight on underscore.
-nnoremap <silent> _ :nohl<CR> 
-set clipboard=unnamedplus " * register is Mac OS clipboard!
+nnoremap <silent> _ :nohl<CR>
+set clipboard=unnamed " * register is Mac OS clipboard!
 
 """ End Experimental Section
 
@@ -120,7 +120,7 @@ set wrap "Wrap lines
 "inoremap $e ""<esc>i
 "inoremap $t <><esc>i
 
-set nocompatible 
+set nocompatible
 set number
 
 set textwidth=80
@@ -155,7 +155,7 @@ if has("autocmd")
 	autocmd FileType sh,csh,tcsh,zsh	  setlocal ts=4 sts=4 sw=4 et
 	autocmd FileType php,javascript,css	setlocal ts=4 sts=4 sw=4 et
 	autocmd FileType text,txt,mkd		    setlocal ts=4 sts=4 sw=4 et tw=80 wrap
-	
+
   autocmd FileType html,xhtml,xml		  setlocal ts=2 sts=2 sw=2 et
 	autocmd FileType ruby,eruby,yaml	setlocal ts=2 sts=2 sw=2 et
 	autocmd FileType scm,sml,lisp			    setlocal ts=2 sts=2 sw=2 et tw=80 nowrap
