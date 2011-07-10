@@ -1,4 +1,4 @@
-# Ricky's vim config
+## Ricky's vim config
 
 ## About
 
