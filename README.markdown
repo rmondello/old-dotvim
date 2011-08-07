@@ -1,5 +1,3 @@
-## Ricky's vim config
-
 ## About
 
 This is the loose collection of files that make up Ricky's vimrc. Credit for most of it goes to [Phil Tang](http://tangphillip.com/) and [Mike White](http://mwhite.info/). Phil's beautiful Sunburst theme is embedded in the project, including extended C and Javascript syntax highlighting definitions.
