@@ -1,5 +1,3 @@
-task :install do
-  puts "Installing awesomeness!!...\n"
 
   system "git submodule update --init"
   system "git submodule update"
@@ -45,7 +43,7 @@ task :pull do
       sh "rvm system ruby extconf.rb"
     end
     sh "make clean && make"
-  end  
+  end
 end
 
 task :default => [:update_docs, :link_vimrc]
