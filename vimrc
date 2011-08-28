@@ -149,6 +149,9 @@ set completeopt=longest,menuone,preview
 
 " inoremap <Tab> <C-R>=HandleTab()<CR>
 
+" makes NERD Commenter happy
+filetype plugin on
+
 if has("autocmd")
 	" language-specific indentation settings
 	autocmd FileType c,cpp				      setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
