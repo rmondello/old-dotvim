@@ -1,4 +1,4 @@
-
+task :install do
   system "git submodule update --init"
   system "git submodule update"
 
