@@ -1,12 +1,6 @@
-[submodule "SunburstVIM"]
-	path = SunburstVIM
-	url = https://github.com/tangphillip/SunburstVIM.git
 [submodule "bundle/SunburstVIM"]
 	path = bundle/SunburstVIM
 	url = https://github.com/tangphillip/SunburstVIM.git
-[submodule "vim-colors-solarized"]
-	path = vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
